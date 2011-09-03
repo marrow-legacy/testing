@@ -1,5 +1,21 @@
 # encoding: utf-8
 
+"""Running this example should produce:
+
+Tests starting.
+
+Feature: Mathematics.
+    Scenario: Basic operations.
+        Given: A number, x, that is odd.
+          And: A number, y, that is even.
+            When: Multiplied together.
+                Then: The result is even.
+            When: Added together.
+                Then: The result is odd.
+
+Finished.
+"""
+
 from __future__ import unicode_literals, print_function
 
 import operator
@@ -65,4 +81,4 @@ def is_odd(environ):
 
 
 if __name__ == '__main__':
-    suite(workers=10, method='chain')
+    suite(workers=10, method='fast')
