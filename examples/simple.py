@@ -14,6 +14,30 @@ Feature: Mathematics.
                 Then: The result is odd.
 
 Finished.
+
+If something went wrong (for example, a magical division by zero when testing
+the multiplication result ;) you would see the following:
+
+Tests starting.
+
+Feature: Mathematics.
+    Scenario: Basic operations.
+        Given: A number, x, that is odd.
+          And: A number, y, that is even.
+            When: Multiplied together.
+                Then: The result is even.
+                      Traceback (most recent call last):
+                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/marrow/testing/__init__.py", line 51, in fast
+                          environ = self(environ)
+                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/marrow/testing/__init__.py", line 41, in __call__
+                          result = self.fn(environ)
+                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/examples/simple.py", line 72, in is_even
+                          1/0
+                      ZeroDivisionError: integer division or modulo by zero
+            When: Added together.
+                Then: The result is odd.
+
+Finished.
 """
 
 from __future__ import unicode_literals, print_function
