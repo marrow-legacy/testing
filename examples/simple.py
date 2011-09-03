@@ -27,11 +27,11 @@ Feature: Mathematics.
             When: Multiplied together.
                 Then: The result is even.
                       Traceback (most recent call last):
-                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/marrow/testing/__init__.py", line 51, in fast
+                        File ".../marrow.testing/marrow/testing/__init__.py", line 51, in fast
                           environ = self(environ)
-                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/marrow/testing/__init__.py", line 41, in __call__
+                        File ".../marrow.testing/marrow/testing/__init__.py", line 41, in __call__
                           result = self.fn(environ)
-                        File "/Users/amcgregor/Projects/Marrow/src/marrow.testing/examples/simple.py", line 72, in is_even
+                        File ".../simple.py", line 72, in is_even
                           1/0
                       ZeroDivisionError: integer division or modulo by zero
             When: Added together.
