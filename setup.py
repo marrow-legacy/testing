@@ -13,6 +13,8 @@ if sys.version_info < (2, 6):
 exec(open(os.path.join("marrow", "testing", "release.py")))
 
 
+additional_requires = ['futures'] if sys.version_info < (3, 2) else []
+
 
 setup(
         name = "marrow.testing",
@@ -31,8 +33,8 @@ https://github.com/marrow/marrow.testing""",
         license = "MIT",
         
         install_requires = [
-            'marrow.util < 2.0'
-        ],
+            'marrow.util < 2.0',
+        ] + additional_requires,
         
         test_suite = 'nose.collector',
         tests_require = [
